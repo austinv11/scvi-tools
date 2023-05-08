@@ -46,7 +46,7 @@ class AnnTorchDataset(Dataset):
             )
         self.adata_manager = adata_manager
         self.is_backed = adata_manager.adata.isbacked
-        self.attributes_and_types = None
+        self.attributes_and_types = getitem_tensors
         if getitem_tensors is not None:
             data_registry = adata_manager.data_registry
             for key in (
